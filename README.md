@@ -1,6 +1,6 @@
 # PICO-8 Node Builder
 
-A simple PICO-8 build system, allowing the merge of multiple files in one, based on Node.js.
+A simple PICO-8 build system based on Node.js, allowing the merge of multiple files in one.
 
 ## Prerequisites
 
@@ -14,11 +14,11 @@ A simple PICO-8 build system, allowing the merge of multiple files in one, based
 
 ## Usage
 
-- Place a `.p8` cartridge at the root of the folder. This file will be overwrited when building. An initial cartride is necessary since its header and footer are never modified.
+- Place a `.p8` cartridge at the root of the folder. This file will be overwrited when building. This initial cartride is required since header and footer are never changed.
 - Put your code in `.lua` files in `src` folder.
-- List your project file in `src/build.json`. They will be concatenated in this order.
-- `npm run watch` (or use shortcuts scripts `watch.bat` or `watch.sh`). Whenever a source files changes, the cartridge is automatically rebuilt.
+- In `src/build.js` edit your cartridge filename and list your project files. They will be concatenated in their order of entry.
+- `npm run watch` (or use shortcuts `watch.bat` or `watch.sh`): whenever a source files changes the cartridge is automatically rebuilt.
 
 ### Example
 
-- You can check helloWorld branch.
+- You can check the [helloWorld](https://github.com/doctb/pico8-node-builder/tree/helloWorld) branch.

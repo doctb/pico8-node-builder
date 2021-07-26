@@ -1,4 +1,4 @@
-const buildFiles = require('./src/build.json');
+const buildFiles = require('./src/build.js');
 const fs = require('fs');
 
 let index = 0;
@@ -14,7 +14,18 @@ const SEPARATOR = 'X{||SEPARATOR||}X';
 const startBuild = () => {
 	// read original file
 	fs.readFile('./' + buildFiles.filename, 'utf8', (err, data) => {
-		if (err) throw err;
+		if (err) {
+			if (err.code === 'ENOENT') {
+				console.log(
+					'\n\n ===> You need to place a file named "' +
+					buildFiles.filename +
+					'" at the root of the folder\n ===> (or edit your cartridge file name in src/build.js)\n'
+				);
+				process.exit(1);
+			} else {
+				throw err;
+			}
+		}
 
 		// retrieve header and footer from original file
 		let s = data.split(HEADER_LIMIT).join(SEPARATOR).split(FOOTER_LIMIT).join(SEPARATOR).split(SEPARATOR);
