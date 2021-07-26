@@ -1,8 +1,7 @@
 module.exports = {
-	filename: 'your_cartridge_filename.p8',
+	filename: 'helloWorld.p8',
 	files: [
-		// 'file1.lua',
-		// 'file2.lua'
-		// ...
+		'file1.lua',
+		'file2.lua'
 	]
 };
