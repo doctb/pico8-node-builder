@@ -14,7 +14,7 @@ A simple PICO-8 build system based on Node.js, allowing the merge of multiple fi
 
 ## Usage
 
-- Place a `.p8` cartridge at the root of the folder. This file will be overwrited when building. This initial cartride is required since header and footer are never changed.
+- Place a `.p8` cartridge at the root of the folder. This file will be overwrited when building. This initial cartride is required since header and footer are never changed. You can create an empty one by launching PICO-8 and doing `save`.
 - Put your code in `.lua` files in `src` folder.
 - In `src/build.js` edit your cartridge filename and list your project files. They will be concatenated in their order of entry.
 - `npm run watch` (or use shortcuts `watch.bat` or `watch.sh`): whenever a source files changes the cartridge is automatically rebuilt.
