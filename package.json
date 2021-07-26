@@ -1,0 +1,25 @@
+{
+  "name": "pico8-node-builder",
+  "version": "1.0.0",
+  "description": "A simple PICO-8 build system, allowing the merge of multiple files in one, based on Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npm-watch",
+    "build": "node ."
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "*"
+    }
+  },
+  "author": "https://github.com/doctb",
+  "license": "MIT",
+  "dependencies": {
+    "npm-watch": "0.6.0"
+  },
+  "homepage": "https://github.com/doctb/pico8-node-builder",
+  "repository": "https://github.com/doctb/pico8-node-builder"
+}
